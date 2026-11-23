@@ -14,7 +14,7 @@ namespace MVC02.Configfrations
         public void Configure(EntityTypeBuilder<Plan> builder)
         {
             builder.Property(X => X.CreatedDate)
-                .HasDefaultValue("GETDATE()");
+                .HasDefaultValueSql("GETDATE()");
 
             builder.ToTable(T => {
                 T.HasCheckConstraint("PlanDurationCheck","DurationDays Between 1 and 365");

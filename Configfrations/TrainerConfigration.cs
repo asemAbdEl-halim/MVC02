@@ -14,7 +14,7 @@ namespace MVC02.Configfrations
         {
             builder.Property(X => X.CreatedDate)
                   .HasColumnName("JoinDate")
-                  .HasDefaultValue("GETDATE()");
+                  .HasDefaultValueSql("GETDATE()");
 
             base.Configure(builder);
         }

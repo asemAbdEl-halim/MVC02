@@ -14,7 +14,7 @@ namespace MVC02.Configfrations
         public void Configure(EntityTypeBuilder<Session> builder)
         {
             builder.Property(X => X.CreatedDate)
-                 .HasDefaultValue("GETDATE()");
+                 .HasDefaultValueSql("GETDATE()");
 
             builder.HasOne(X => X.Trainer)
                 .WithMany(X => X.Sessions)

@@ -16,7 +16,7 @@ namespace MVC02.Configfrations
             builder.HasKey(E => E.Id);
 
             builder.Property(X => X.CreatedDate)
-                .HasDefaultValue("GETDATE()");
+                .HasDefaultValueSql("GETDATE()");
 
 
         }
