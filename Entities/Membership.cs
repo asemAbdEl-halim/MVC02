@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MVC02.Entities
 {
-    public class Membership
+    public class Membership : BaseEntity
     {
         public int MemberId { get; set; } // FK
         public Member Member { get; set; } 
